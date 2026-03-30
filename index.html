@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'M SORRY WIN E 😭😭😭</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@400;600;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .tear {
+            position: fixed;
+            top: -20px;
+            font-size: 20px;
+            animation: tearFall linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes tearFall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            animation: pulseText 1s ease-in-out infinite alternate;
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+        }
+
+        @keyframes pulseText {
+            from { transform: scale(1); color: #ff6b6b; }
+            to { transform: scale(1.05); color: #ff8e8e; }
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            opacity: 0.8;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .sad-face {
+            font-size: 120px;
+            animation: wobble 2s ease-in-out infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-5deg) scale(1); }
+            25% { transform: rotate(5deg) scale(1.1); }
+            50% { transform: rotate(-3deg) scale(1); }
+            75% { transform: rotate(3deg) scale(1.05); }
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            animation: bounce 2s infinite;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2 {
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            margin-bottom: 30px;
+            font-weight: 900;
+        }
+
+        .sorry-meter-section {
+            background: linear-gradient(135deg, #16213e, #1a1a2e);
+        }
+
+        .meter-container {
+            width: 80%;
+            max-width: 500px;
+            background: #2a2a4a;
+            border-radius: 50px;
+            padding: 8px;
+            margin: 20px 0;
+            box-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .meter-fill {
+            height: 50px;
+            background: linear-gradient(90deg, #ff6b6b, #ff8e53, #ff6b6b);
+            background-size: 200% 100%;
+            border-radius: 50px;
+            width: 0%;
+            transition: width 2s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .meter-label {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        .excuses-section {
+            background: linear-gradient(135deg, #0f3460, #1a1a2e);
+        }
+
+        .excuse-wheel {
+            background: linear-gradient(145deg, #2a2a4a, #1e1e3a);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .excuse-display {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .spin-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .spin-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 30px rgba(255, 107, 107, 0.6);
+        }
+
+        .spin-btn:active {
+            transform: scale(0.95);
+        }
+
+        .forgive-section {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            min-height: 200px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .yes-btn, .no-btn {
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .yes-btn {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: white;
+            box-shadow: 0 5px 20px rgba(0, 184, 148, 0.4);
+            animation: yesGrow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes yesGrow {
+            from { transform: scale(1); }
+            to { transform: scale(1.15); }
+        }
+
+        .yes-btn:hover {
+            transform: scale(1.3) !important;
+            box-shadow: 0 5px 30px rgba(0, 184, 148, 0.6);
+        }
+
+        .no-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+            position: relative;
+            z-index: 10;
+        }
+
+        .meme-section {
+            background: linear-gradient(135deg, #16213e, #0f3460);
+        }
+
+        .meme-carousel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .meme-card {
+            background: linear-gradient(145deg, #2a2a4a, #1e1e3a);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .meme-card:hover {
+            transform: scale(1.02);
+        }
+
+        .meme-text {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            line-height: 1.6;
+        }
+
+        .meme-emoji {
+            font-size: 80px;
+            margin: 15px 0;
+        }
+
+        .meme-nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .meme-nav button {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .meme-nav button:hover {
+            transform: scale(1.1);
+        }
+
+        .promise-section {
+            background: linear-gradient(135deg, #0f3460, #1a1a2e);
+        }
+
+        .promises {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .promise-card {
+            background: linear-gradient(145deg, #2a2a4a, #1e1e3a);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .promise-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff6b6b;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
+        }
+
+        .promise-card.checked {
+            border-color: #00b894;
+            background: linear-gradient(145deg, #1e3a2a, #1a2e1e);
+        }
+
+        .promise-card .emoji {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .promise-card .check {
+            font-size: 30px;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .promise-card.checked .check {
+            opacity: 1;
+        }
+
+        .dramatic-section {
+            background: linear-gradient(135deg, #1a1a2e, #0f3460);
+        }
+
+        .typewriter {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            max-width: 700px;
+            line-height: 2;
+            min-height: 200px;
+            padding: 20px;
+        }
+
+        .typewriter .cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .clicker-section {
+            background: linear-gradient(135deg, #16213e, #1a1a2e);
+        }
+
+        .clicker-area {
+            text-align: center;
+        }
+
+        .sorry-count {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 900;
+            color: #ff6b6b;
+            text-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+        }
+
+        .clicker-btn {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            border: none;
+            font-size: 4rem;
+            cursor: pointer;
+            transition: all 0.1s;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+            margin: 20px;
+        }
+
+        .clicker-btn:active {
+            transform: scale(0.9);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .clicker-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .click-milestone {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            min-height: 60px;
+            color: #ffd32a;
+        }
+
+        .float-sorry {
+            position: fixed;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff6b6b;
+            pointer-events: none;
+            z-index: 1000;
+            animation: floatUp 1s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(-100px) scale(1.5); }
+        }
+
+        .celebration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .celebration.active {
+            display: flex;
+        }
+
+        .celebration h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            margin-bottom: 20px;
+            animation: rainbow 2s infinite;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff6b6b; }
+            25% { color: #ffd32a; }
+            50% { color: #00b894; }
+            75% { color: #6c5ce7; }
+            100% { color: #ff6b6b; }
+        }
+
+        .celebration .hearts {
+            font-size: 80px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .confetti {
+            position: fixed;
+            top: -10px;
+            font-size: 25px;
+            z-index: 10001;
+            pointer-events: none;
+            animation: confettiFall linear forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+
+        .popup-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-weight: 600;
+            z-index: 9999;
+            animation: slideIn 0.5s ease-out, slideOut 0.5s ease-in 2.5s forwards;
+            max-width: 300px;
+            box-shadow: 0 5px 20px rgba(108, 92, 231, 0.4);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(120%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideOut {
+            from { transform: translateX(0); }
+            to { transform: translateX(120%); }
+        }
+
+        .playlist-section {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+        }
+
+        .playlist {
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .song {
+            background: linear-gradient(145deg, #2a2a4a, #1e1e3a);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .song:hover {
+            transform: translateX(10px);
+            background: linear-gradient(145deg, #3a3a5a, #2e2e4a);
+        }
+
+        .song .song-emoji {
+            font-size: 30px;
+        }
+
+        .song .song-info {
+            text-align: left;
+        }
+
+        .song .song-title {
+            font-weight: 700;
+        }
+
+        .song .song-artist {
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        .playing {
+            border: 2px solid #ff6b6b;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+        }
+
+        .letter-section {
+            background: linear-gradient(135deg, #0f3460, #1a1a2e);
+        }
+
+        .letter {
+            background: linear-gradient(145deg, #fffaf0, #fff5e6);
+            color: #333;
+            padding: 40px;
+            border-radius: 5px;
+            max-width: 600px;
+            width: 90%;
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            transform: rotate(-1deg);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .letter::before {
+            content: '📌';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+        }
+
+        .letter .signature {
+            text-align: right;
+            font-size: 1.4rem;
+            margin-top: 20px;
+            color: #ff6b6b;
+        }
+
+        .nav-dots {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-dot.active {
+            background: #ff6b6b;
+            transform: scale(1.3);
+        }
+
+        .nav-dot:hover {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-dots { display: none; }
+            .promises { grid-template-columns: 1fr; }
+            .clicker-btn { width: 140px; height: 140px; font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-dots" id="navDots"></div>
+
+    <!-- HERO -->
+    <section class="hero section" id="sec-hero">
+        <div class="sad-face">🥺</div>
+        <h1>I'M SO SORRY WIN E</h1>
+        <p class="subtitle">This is my official, legally-binding, notarized apology 📜</p>
+        <p style="font-size: 1.1rem; opacity: 0.6; margin-top: 10px;">
+            (Yes, I made a whole website. That's how sorry I am.)
+        </p>
+        <div class="scroll-hint">👇 Scroll down, it gets worse 👇</div>
+    </section>
+
+    <!-- SORRY METER -->
+    <section class="section sorry-meter-section" id="sec-meter">
+        <div class="fade-in">
+            <h2>📊 How Sorry Am I?</h2>
+            <div class="meter-container">
+                <div class="meter-fill" id="sorryMeter">0%</div>
+            </div>
+            <p class="meter-label" id="meterLabel">Loading my guilt...</p>
+            <p style="margin-top: 20px; opacity: 0.6; font-size: 0.9rem;">
+                * This meter goes past 100% because I'm THAT sorry
+            </p>
+        </div>
+    </section>
+
+    <!-- SORRY CLICKER -->
+    <section class="section clicker-section" id="sec-clicker">
+        <div class="fade-in clicker-area">
+            <h2>🖱️ Sorry Clicker 3000™</h2>
+            <p style="opacity: 0.7; margin-bottom: 10px;">Every click = 1 sorry. Let me prove it.</p>
+            <div class="sorry-count" id="sorryCount">0</div>
+            <p>times sorry</p>
+            <button class="clicker-btn" id="clickerBtn" onclick="clickSorry(event)">😭</button>
+            <p class="click-milestone" id="milestone">Start clicking!</p>
+        </div>
+    </section>
+
+    <!-- EXCUSE GENERATOR -->
+    <section class="section excuses-section" id="sec-excuses">
+        <div class="fade-in">
+            <h2>🎰 Excuse Generator</h2>
+            <p style="opacity: 0.7; margin-bottom: 20px;">(None of these are valid, I know)</p>
+            <div class="excuse-wheel">
+                <div class="excuse-display" id="excuseDisplay">
+                    Press the button to generate a terrible excuse 👇
+                </div>
+                <button class="spin-btn" onclick="spinExcuse()">🎰 Generate Excuse</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEME GALLERY -->
+    <section class="section meme-section" id="sec-memes">
+        <div class="fade-in">
+            <h2>📸 Apology Meme Gallery</h2>
+            <div class="meme-carousel">
+                <div class="meme-card" id="memeCard">
+                    <div class="meme-emoji" id="memeEmoji">🐶</div>
+                    <p class="meme-text" id="memeText">Me waiting for you to text me back</p>
+                </div>
+                <div class="meme-nav">
+                    <button onclick="prevMeme()">⬅️ Prev</button>
+                    <button onclick="nextMeme()">Next ➡️</button>
+                </div>
+                <p style="opacity: 0.5; font-size: 0.9rem;" id="memeCounter">1 / 10</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DRAMATIC APOLOGY LETTER -->
+    <section class="section dramatic-section" id="sec-dramatic">
+        <div class="fade-in">
+            <h2>🎭 My Dramatic Apology</h2>
+            <p style="opacity: 0.6; margin-bottom: 20px;">(Read in Morgan Freeman's voice)</p>
+            <div class="typewriter" id="typewriter"></div>
+            <button class="spin-btn" onclick="startTypewriter()" id="typeBtn" style="margin-top: 20px;">
+                🎬 Play Dramatic Apology
+            </button>
+        </div>
+    </section>
+
+    <!-- PROMISES -->
+    <section class="section promise-section" id="sec-promises">
+        <div class="fade-in">
+            <h2>🤞 My Solemn Promises</h2>
+            <p style="opacity: 0.7; margin-bottom: 10px;">Click to hold me accountable</p>
+            <div class="promises" id="promiseGrid"></div>
+        </div>
+    </section>
+
+    <!-- SAD BOI 90s PLAYLIST -->
+    <section class="section playlist-section" id="sec-playlist">
+        <div class="fade-in">
+            <h2>🎵 My "I Messed Up" 90s Playlist</h2>
+            <p style="opacity: 0.7; margin-bottom: 20px;">Songs I've been dramatically crying to</p>
+            <div class="playlist" id="playlist"></div>
+        </div>
+    </section>
+
+    <!-- THE ACTUAL LETTER -->
+    <section class="section letter-section" id="sec-letter">
+        <div class="fade-in">
+            <h2 style="margin-bottom: 30px;">💌 But For Real Though...</h2>
+            <div class="letter">
+                <p>Dear Win E,</p>
+                <br>
+                <p>Okay, jokes aside for a second. I know I messed up, and I'm genuinely sorry. You're honestly one of the coolest people I know, and the thought of annoying you makes me feel like absolute trash 🗑️</p>
+                <br>
+                <p>You deserve someone who doesn't act like a complete buffoon around you 👑 and I promise to do better. Not because I made a dumb website about it, but because you genuinely deserve it.</p>
+                <br>
+                <p>I'll make it up to you. Starting now. Starting with this ridiculous website that I spent way too long on instead of just saying sorry like a normal person 😅</p>
+                <br>
+                <p>You're pretty cool and I really like hanging out with you. There, I said it. Don't let it go to your head. 😤✨</p>
+                <div class="signature">
+                    Your favorite idiot,<br>
+                    🥺👉👈
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORGIVE ME? -->
+    <section class="section forgive-section" id="sec-forgive">
+        <div class="fade-in">
+            <h2>So... Do You Forgive Me? 🥺👉👈</h2>
+            <div class="btn-container" id="btnContainer">
+                <button class="yes-btn" onclick="forgiven()">YES 💕</button>
+                <button class="no-btn" id="noBtn" onmouseover="moveNoBtn()" onclick="moveNoBtn()">No 😤</button>
+            </div>
+            <p id="noCounter" style="margin-top: 20px; opacity: 0.6;"></p>
+        </div>
+    </section>
+
+    <!-- CELEBRATION OVERLAY -->
+    <div class="celebration" id="celebration">
+        <div class="hearts">🎉</div>
+        <h1>SHE FORGAVE ME!!!</h1>
+        <p style="font-size: 1.5rem; margin: 20px 0;">I PROMISE TO BE LESS OF A CLOWN FROM NOW ON*</p>
+        <p style="opacity: 0.5;">*this is probably a lie but I'll try my best</p>
+        <p style="font-size: 3rem; margin-top: 30px;">😭🙏✨🎊😎</p>
+        <button class="spin-btn" onclick="document.getElementById('celebration').classList.remove('active')" style="margin-top: 30px;">
+            Okay close this 😂
+        </button>
+    </div>
+
+    <script>
+        // TEARS RAIN
+        function createTear() {
+            const tear = document.createElement('div');
+            tear.className = 'tear';
+            tear.textContent = ['💧', '😢', '😭', '🥺', '💔'][Math.floor(Math.random() * 5)];
+            tear.style.left = Math.random() * 100 + 'vw';
+            tear.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            tear.style.fontSize = (Math.random() * 15 + 12) + 'px';
+            tear.style.opacity = Math.random() * 0.5 + 0.3;
+            document.body.appendChild(tear);
+            setTimeout(() => tear.remove(), 6000);
+        }
+        setInterval(createTear, 400);
+
+        // NAV DOTS
+        const sections = document.querySelectorAll('.section');
+        const navDots = document.getElementById('navDots');
+        sections.forEach((sec, i) => {
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot';
+            dot.onclick = () => sec.scrollIntoView({ behavior: 'smooth' });
+            navDots.appendChild(dot);
+        });
+
+        // SCROLL OBSERVER
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const fadeEl = entry.target.querySelector('.fade-in');
+                if (fadeEl && entry.isIntersecting) {
+                    fadeEl.classList.add('visible');
+                }
+                if (entry.isIntersecting) {
+                    const idx = [...sections].indexOf(entry.target);
+                    document.querySelectorAll('.nav-dot').forEach((d, i) => {
+                        d.classList.toggle('active', i === idx);
+                    });
+                    if (entry.target.id === 'sec-meter') triggerMeter();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(s => observer.observe(s));
+
+        // SORRY METER
+        let meterTriggered = false;
+        function triggerMeter() {
+            if (meterTriggered) return;
+            meterTriggered = true;
+            const meter = document.getElementById('sorryMeter');
+            const label = document.getElementById('meterLabel');
+
+            const stages = [
+                { width: '20%', text: '20%', label: 'Hmm, warming up...' },
+                { width: '50%', text: '50%', label: 'Getting more sorry...' },
+                { width: '75%', text: '75%', label: 'Okay this is a lot of sorry...' },
+                { width: '100%', text: '100%', label: 'MAX SORRY REACHED... wait...' },
+                { width: '100%', text: '∞%', label: '⚠️ SORRY LEVELS: INCALCULABLE ⚠️' },
+            ];
+
+            let i = 0;
+            function nextStage() {
+                if (i >= stages.length) return;
+                const s = stages[i];
+                meter.style.width = s.width;
+                meter.textContent = s.text;
+                label.textContent = s.label;
+                i++;
+                setTimeout(nextStage, 1200);
+            }
+            setTimeout(nextStage, 500);
+        }
+
+        // SORRY CLICKER
+        let sorryClicks = 0;
+        const milestones = {
+            1: "That's 1! Only 999 more to go 😤",
+            10: "10 sorries! She's still not impressed 😑",
+            25: "25! My finger hurts but I DESERVE IT 😭",
+            50: "FIFTY!! Am I forgiven yet?? 🥺",
+            100: "💯 A HUNDRED SORRIES!! This is commitment!",
+            150: "150... I think I need therapy 😅",
+            200: "200!!! OKAY THIS IS GETTING INSANE 🤯",
+            300: "300?! You're either really sorry or really bored 😂",
+            500: "FIVE HUNDRED. You absolute legend. 👑",
+            1000: "1000!! 🎉 YOU WIN! ...but are you forgiven tho? 🤔"
+        };
+
+        function clickSorry(e) {
+            sorryClicks++;
+            document.getElementById('sorryCount').textContent = sorryClicks;
+
+            const float = document.createElement('div');
+            float.className = 'float-sorry';
+            float.textContent = ['SORRY!', 'I APOLOGIZE!', 'FORGIVE ME!', 'MY BAD!', 'I WAS WRONG!', '😭', '🙏', '💔'][Math.floor(Math.random() * 8)];
+            float.style.left = (e.clientX - 30) + 'px';
+            float.style.top = (e.clientY - 20) + 'px';
+            document.body.appendChild(float);
+            setTimeout(() => float.remove(), 1000);
+
+            if (milestones[sorryClicks]) {
+                document.getElementById('milestone').textContent = milestones[sorryClicks];
+            }
+
+            const btn = document.getElementById('clickerBtn');
+            const faces = ['😭', '😢', '🥺', '😩', '😫', '🙏', '💀', '😿'];
+            btn.textContent = faces[Math.floor(Math.random() * faces.length)];
+        }
+
+        // EXCUSE GENERATOR
+        const excuses = [
+            "Mercury was in retrograde 🪐",
+            "My horoscope said I'd be a clown today 🤡",
+            "I was possessed by the spirit of a dumb person 👻",
+            "My brain had a Windows 95 crash 💻",
+            "I was dropped on my head as a baby... clearly 🍼",
+            "A black cat crossed my path and I lost all common sense 🐈‍⬛",
+            "I temporarily forgot how to be a decent human being 🧠",
+            "My last brain cell was on vacation 🏖️",
+            "I thought it was Opposite Day?? 📅",
+            "I blame the dial-up internet. Somehow. 📶",
+            "Honestly? I have no excuse. I'm just dumb. 🤷",
+            "My emotional intelligence had a Y2K bug ⏳",
+            "I was body-snatched by an alien who doesn't know how humans work 👽",
+            "The audacity just took over me. I couldn't stop it. 💀",
+            "I had a temporary case of clownitis 🤡🏥",
+            "My brain said 'what if we ruin everything?' and I said 'bet' 🎲",
+            "Plot twist: I was the villain this whole time 😱",
+            "I blame society. And also myself. Mostly myself. 🪞",
+            "My common sense called in sick that day 🤒",
+            "I was speedrunning 'how to mess up any%' 🎮"
+        ];
+
+        let lastExcuse = -1;
+        function spinExcuse() {
+            const display = document.getElementById('excuseDisplay');
+            display.style.transform = 'scale(0.9)';
+            display.style.opacity = '0.5';
+
+            let shuffles = 0;
+            const shuffleInterval = setInterval(() => {
+                display.textContent = excuses[Math.floor(Math.random() * excuses.length)];
+                shuffles++;
+                if (shuffles > 10) {
+                    clearInterval(shuffleInterval);
+                    let idx;
+                    do { idx = Math.floor(Math.random() * excuses.length); } while (idx === lastExcuse);
+                    lastExcuse = idx;
+                    display.textContent = excuses[idx];
+                    display.style.transform = 'scale(1)';
+                    display.style.opacity = '1';
+                }
+            }, 80);
+        }
+
+        // MEME GALLERY
+        const memes = [
+            { emoji: '🐶', text: 'Me waiting for Win E to text back like a good boy who knows he messed up' },
+            { emoji: '🤡', text: 'Me thinking I could get away with it' },
+            { emoji: '💀', text: 'Me when I realized what I did' },
+            { emoji: '🧎', text: 'Current mood: on my knees begging for forgiveness' },
+            { emoji: '📱', text: 'Me checking if Win E has seen my 47 messages' },
+            { emoji: '📻', text: 'Me outside with a boombox like it\'s 1989' },
+            { emoji: '🪦', text: '"Here lies my dignity. Died so this apology could live."' },
+            { emoji: '🌧️', text: 'The weather outside matches my emotional state' },
+            { emoji: '🍕', text: 'Will trade pizza for forgiveness. Final offer.' },
+            { emoji: '🤖', text: 'Me malfunctioning trying to explain myself' }
+        ];
+
+        let currentMeme = 0;
+        function updateMeme() {
+            const m = memes[currentMeme];
+            document.getElementById('memeEmoji').textContent = m.emoji;
+            document.getElementById('memeText').textContent = m.text;
+            document.getElementById('memeCounter').textContent = `${currentMeme + 1} / ${memes.length}`;
+
+            const card = document.getElementById('memeCard');
+            card.style.transform = 'scale(0.95) rotate(-2deg)';
+            setTimeout(() => card.style.transform = 'scale(1) rotate(0deg)', 200);
+        }
+
+        function nextMeme() {
+            currentMeme = (currentMeme + 1) % memes.length;
+            updateMeme();
+        }
+
+        function prevMeme() {
+            currentMeme = (currentMeme - 1 + memes.length) % memes.length;
+            updateMeme();
+        }
+
+        // TYPEWRITER
+        const dramaticText = `And so... there I stood. A fool. A complete and utter buffoon. 🤡
+
+The weight of my stupidity crashed upon me like a thousand waves of regret. 🌊
+
+I looked at my phone. No messages. Just the cold, unforgiving "read" receipt staring back at me. 📱💔
+
+"What have I done?" I whispered into the void. The void did not answer. It was also disappointed in me. 😔
+
+And in that moment, I knew... I had to make a website. Because apparently, a simple "I'm sorry" text just wouldn't cut it anymore. 
+
+This is my cross to bear. My penance. My... entire evening spent learning how to code instead of just apologizing like a normal person. 💻😭
+
+But I'd do it again. I'd make a THOUSAND websites. Because getting Win E to forgive me is worth every single stupid line of code. ✨`;
+
+        let typewriterRunning = false;
+        function startTypewriter() {
+            if (typewriterRunning) return;
+            typewriterRunning = true;
+            const el = document.getElementById('typewriter');
+            const btn = document.getElementById('typeBtn');
+            btn.style.display = 'none';
+            el.textContent = '';
+            let i = 0;
+
+            function type() {
+                if (i < dramaticText.length) {
+                    el.textContent = dramaticText.slice(0, i + 1) + '|';
+                    i++;
+                    const delay = dramaticText[i - 1] === '.' ? 200 :
+                                  dramaticText[i - 1] === ',' ? 100 :
+                                  dramaticText[i - 1] === '\n' ? 150 : 30;
+                    setTimeout(type, delay);
+                } else {
+                    el.textContent = dramaticText;
+                    typewriterRunning = false;
+                    btn.style.display = 'inline-block';
+                    btn.textContent = '🔄 Replay';
+                    btn.onclick = () => { typewriterRunning = false; startTypewriter(); };
+                }
+            }
+            type();
+        }
+
+        // PROMISES
+        const promises = [
+            { emoji: '🍕', text: "I'll let you pick where we eat" },
+            { emoji: '📱', text: "I'll text back within 5 minutes" },
+            { emoji: '🎬', text: "We'll watch YOUR movie picks" },
+            { emoji: '🤐', text: "I'll actually listen and not just nod" },
+            { emoji: '📸', text: "I'll take your photos until you like one" },
+            { emoji: '🚫', text: "I'll admit when I'm wrong (starting now)" },
+            { emoji: '☕', text: "Free coffee/boba whenever you want" },
+            { emoji: '🤗', text: "I'll be less annoying (debatable)" },
+            { emoji: '🎮', text: "I'll let you win at games (sometimes)" },
+            { emoji: '🌟', text: "I'll hype you up 24/7" },
+            { emoji: '🙊', text: "I'll keep your secrets forever" },
+            { emoji: '😤', text: "I'll try to be less of a clown" }
+        ];
+
+        const grid = document.getElementById('promiseGrid');
+        promises.forEach((p, i) => {
+            const card = document.createElement('div');
+            card.className = 'promise-card';
+            card.innerHTML = `
+                <div class="emoji">${p.emoji}</div>
+                <p>${p.text}</p>
+                <div class="check">✅</div>
+            `;
+            card.onclick = () => card.classList.toggle('checked');
+            grid.appendChild(card);
+        });
+
+        // 90s PLAYLIST
+        const songs = [
+            { emoji: '💔', title: "Nothing Compares 2 U", artist: "Sinéad O'Connor (1990)" },
+            { emoji: '🎤', title: "I Will Always Love You", artist: "Whitney Houston (1992)" },
+            { emoji: '🌧️', title: "November Rain", artist: "Guns N' Roses (1992)" },
+            { emoji: '😢', title: "Tears In Heaven", artist: "Eric Clapton (1992)" },
+            { emoji: '💀', title: "End Of The Road", artist: "Boyz II Men (1992)" },
+            { emoji: '😭', title: "Everybody Hurts", artist: "R.E.M. (1993)" },
+            { emoji: '🥀', title: "Un-Break My Heart", artist: "Toni Braxton (1996)" },
+            { emoji: '🚢', title: "My Heart Will Go On", artist: "Celine Dion (1997)" },
+            { emoji: '🌙', title: "I Don't Want To Miss A Thing", artist: "Aerosmith (1998)" },
+            { emoji: '🙏', title: "...Baby One More Time", artist: "Britney (begging energy) (1999)" }
+        ];
+
+        const playlistEl = document.getElementById('playlist');
+        songs.forEach((s, i) => {
+            const song = document.createElement('div');
+            song.className = 'song';
+            song.innerHTML = `
+                <div class="song-emoji">${s.emoji}</div>
+                <div class="song-info">
+                    <div class="song-title">${s.title}</div>
+                    <div class="song-artist">${s.artist}</div>
+                </div>
+            `;
+            song.onclick = () => {
+                document.querySelectorAll('.song').forEach(s => s.classList.remove('playing'));
+                song.classList.toggle('playing');
+                showPopup(`🎵 Now crying to: ${s.title}`);
+            };
+            playlistEl.appendChild(song);
+        });
+
+        // FORGIVE ME BUTTONS
+        let noAttempts = 0;
+        const noMessages = [
+            "Nope, can't click that 😏",
+            "Nice try! The button has trust issues too 😤",
+            "That button is running from commitment 👀",
+            "The 'No' button said: ✌️",
+            "It's giving... you can't say no to this face 🥺",
+            "STOP TRYING TO SAY NO 😭",
+            "The button is in witness protection now 🕵️",
+            "Win E please just click Yes I'm BEGGING 🧎",
+            "I will make another website I swear 😤",
+            "The No button has left the chat 💨"
+        ];
+
+        function moveNoBtn() {
+            const btn = document.getElementById('noBtn');
+            const container = document.getElementById('btnContainer');
+            const rect = container.getBoundingClientRect();
+
+            noAttempts++;
+
+            const maxX = rect.width - btn.offsetWidth - 20;
+            const maxY = rect.height - btn.offsetHeight - 20;
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+
+            btn.style.position = 'absolute';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+            btn.style.transition = 'all 0.2s';
+
+            const scale = Math.max(0.3, 1 - (noAttempts * 0.08));
+            btn.style.transform = `scale(${scale})`;
+
+            const counter = document.getElementById('noCounter');
+            if (noAttempts <= noMessages.length) {
+                counter.textContent = noMessages[noAttempts - 1];
+            }
+
+            if (noAttempts > 12) {
+                btn.style.opacity = '0';
+                btn.style.pointerEvents = 'none';
+                counter.textContent = "The 'No' button has been eliminated. You know what to do. 😏";
+            }
+        }
+
+        // CELEBRATION
+        function forgiven() {
+            document.getElementById('celebration').classList.add('active');
+
+            const confettiEmojis = ['🎉', '🎊', '💕', '✨', '🥳', '⭐', '💖', '🎈', '🌟', '🙌'];
+            for (let i = 0; i < 60; i++) {
+                setTimeout(() => {
+                    const conf = document.createElement('div');
+                    conf.className = 'confetti';
+                    conf.textContent = confettiEmojis[Math.floor(Math.random() * confettiEmojis.length)];
+                    conf.style.left = Math.random() * 100 + 'vw';
+                    conf.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    document.body.appendChild(conf);
+                    setTimeout(() => conf.remove(), 4000);
+                }, i * 50);
+            }
+
+            showPopup("🎉 YOOO SHE SAID YES!! 🎉");
+        }
+
+        // POPUP MESSAGES
+        function showPopup(text) {
+            const existing = document.querySelector('.popup-message');
+            if (existing) existing.remove();
+
+            const popup = document.createElement('div');
+            popup.className = 'popup-message';
+            popup.textContent = text;
+            document.body.appendChild(popup);
+            setTimeout(() => popup.remove(), 3000);
+        }
+
+        const randomPopups = [
+            "She's still scrolling... there's hope! 🙏",
+            "Fun fact: I Googled 'how to apologize like a pro' 😅",
+            "My search history is 90% 'apology ideas' now 📱",
+            "I rehearsed this apology in the shower 🚿",
+            "My friends said this was 'too much'. They're wrong. 😤",
+            "If this doesn't work, I'm moving to Antarctica 🐧",
+            "I literally learned HTML for this. THAT'S dedication. 💻"
+        ];
+
+        let popupShown = new Set();
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+            const popupIndex = Math.floor(scrollPercent * randomPopups.length);
+            if (popupIndex >= 0 && popupIndex < randomPopups.length && !popupShown.has(popupIndex)) {
+                popupShown.add(popupIndex);
+                setTimeout(() => showPopup(randomPopups[popupIndex]), 500);
+            }
+        });
+    </script>
+</body>
+</html>
